@@ -1,0 +1,79 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#board {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.tile {
+  border: 1px solid black;
+  display: inline-block;
+  position: absolute;
+}
+
+.dirt {
+  background-image: url('images/dirt.png');
+}
+
+
+#logic {
+  float: left;
+  display: block;
+  width: 500px;
+  height: 300px;
+  font-family: courier;
+  font-size: 14px;
+}
+
+
+.robot {
+    width: 32px;
+    height: 32px;
+    background-image: url("images/sprite.png");
+    position: absolute;
+    margin: 9px;
+    background-position:  -96px -128px;
+    -webkit-transition: all 1s;
+    -webkit-transform: scale(1.5, 1.5);
+}
+
+.left {
+  -webkit-animation: left .8s steps(3) infinite;
+}
+
+.right {
+  -webkit-animation: right .8s steps(3) infinite;
+}
+
+.up {
+  -webkit-animation: up .8s steps(3) infinite;
+}
+
+.down {
+  -webkit-animation: down .8s steps(3) infinite;
+}
+
+@-webkit-keyframes down {
+   from { background-position:  -96px -128px; }
+     to { background-position:  -192px -128px; }
+}
+
+@-webkit-keyframes up {
+   from { background-position:  -96px -224px; }
+     to { background-position:  -192px -224px; }
+}
+
+@-webkit-keyframes right {
+   from { background-position:  -96px -192px; }
+     to { background-position:  -192px -192px; }
+}
+
+@-webkit-keyframes left {
+   from { background-position:  -96px -160px; }
+     to { background-position:  -192px -160px; }
+}
+
